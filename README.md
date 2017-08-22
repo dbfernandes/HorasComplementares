@@ -28,27 +28,28 @@ Feito o clone, basta seguir as orientações de instalação de qualquer sistema
 $ php composer.phar install
 ```
 
-Depois disso, inicialize seu sistema através do comando abaixo. Você será será questionado se deseja criar um ambiente de desenvolvimento ou produção. Caso você pretenda fazer edições no código do repositório, ou contribuir com este projeto, opte pelo ambiente de desenvolvimento.
+Depois disso, acesse a turma de **Prática de Banco de Dados** no **CodeBench** (2017/2), clique na aba de Materiais Didáticos, e faça o download do Dump do banco de dados do deste sistema. Esse Dump foi gerado a partir do sistema em produção, e foi colocado no Codebench porque possui dados sigilosos.
+
+Crie um banco de dados MySQL em seu sistema e carregue o dump no novo banco. Crie um arquivo chamado `db.php` dentro do diretório `config` com o seguinte conteúdo:
 
 ```
-$ php init
+<?php
+
+return [
+    'class' => 'yii\db\Connection',
+    'dsn' => 'mysql:host=localhost;dbname=<banco>',
+    'username' => '<usuario do banco>',
+    'password' => '<senha usuario do banco>',
+    'charset' => 'utf8',
+];
 ```
 
-Uma vez inicializado seu sistema, acesse a turma de **Prática de Banco de Dados** no **CodeBench** (2017/2), clique na aba de Materiais Didáticos, e faça o download do Dump do banco de dados do deste sistema. Esse Dump foi gerado a partir do sistema em produção, e foi colocado no Codebench porque possui dados sigilosos.
+No arquivo `db.php`, troque as strings `<banco>`, `<usuario do banco>` e `<senha usuario do banco>` pelos dados corretos dentro de seu sistema.
 
-Crie um banco de dados MySQL em seu sistema e carregue o dump no novo banco. Após isso, abra o arquivo `common/config/main-local.php` e informe os dados de acesso do banco.
-
-Também é importante acessar o diretório `backend/views/adminLTE/yiisoft/yii2-app/layouts` e criar o menu da aplicação (arquivo `left.php`). Esse diretório contém um arquivo chamado `left-sample.php` que você pode usar para gerar o menu da sua aplicação através dos seguintes comandos:
-
-```
-$ cd backend/views/adminLTE/yiisoft/yii2-app/layouts
-$ cp left-sample.php left.php
-```
 Para acessar o backend, você pode usar o seguinte usuário:
 
 ```
 Nome Completo: Usuário Todo Poderoso
-CPF: 878.832.797-34
+CPF: 362.687.674-89
 Senha: Utp102030
 ```
-OKOK
