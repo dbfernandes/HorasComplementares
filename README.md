@@ -22,10 +22,16 @@ Após o fork, você pode clonar seu novo repositório através do comando git cl
 $ git clone https://github.com/<seu usuário no github>/HorasComplementares
 ```
 
-Feito o clone, basta seguir as orientações de instalação de qualquer sistema desenvolvido através do Yii 2. O primeiro passo é instalar as dependências do sistema através do composer:
+Feito o clone, basta seguir as orientações de instalação de qualquer sistema desenvolvido através do Yii 2. O primeiro passo é instalar as dependências do sistema através do composer, mas antes disso, temos que instalar o [composer asset plugin](https://github.com/fxpio/composer-asset-plugin), caso ele ainda não tenha sido instalado previamente:
 
 ```
-$ php composer.phar install
+$ php composer.phar global require "fxp/composer-asset-plugin:^1.3.1"
+```
+
+Feito isso, podemos instalar as dependências do sistema normalmente
+
+```
+$ php composer.phar --prefer-dist install
 ```
 
 Depois disso, acesse a turma de **Prática de Banco de Dados** no **CodeBench** (2017/2), clique na aba de Materiais Didáticos, e faça o download do Dump do banco de dados do deste sistema. Esse Dump foi gerado a partir do sistema em produção, e foi colocado no Codebench porque possui dados sigilosos.
