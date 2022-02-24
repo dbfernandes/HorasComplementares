@@ -77,7 +77,7 @@ class Periodo extends \yii\db\ActiveRecord
         }
     }
 	
-	function checkData($data) {
+	public static function checkData($data) {
 		return (date('d-m-Y', strtotime($data)) == $data);
     }
 

@@ -30,8 +30,8 @@ $config = [
 	    'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
-                'username' => 'sistemas@icomp.ufam.edu.br',
-                'password' => 'Si102030',
+                'username' => 'dbfernandes@gmail.com',
+                'password' => 'Mok4452#',
                 'port' => '465',
                 'encryption' => 'ssl',
             ],

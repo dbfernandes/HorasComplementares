@@ -96,7 +96,7 @@ class SolicitacaoSearch extends Solicitacao
 
 		// grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
+            'solicitacao.id' => $this->id,
             'dtInicio' => $this->dtInicio,
             'dtTermino' => $this->dtTermino,
             'horasLancadas' => $this->horasLancadas,
